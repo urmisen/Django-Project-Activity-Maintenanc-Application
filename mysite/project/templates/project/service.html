@@ -1,0 +1,56 @@
+{% extends 'project/base.html' %}
+{% block main_content %}
+
+<style>
+    body {
+      background-image:url(/media/computers-3.png);
+      background-size: 100% 100%;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      height: 100vh;
+      margin: 0px;
+      padding:0px
+      width:100%;
+      height:100%;
+  }
+
+
+
+   .content-section
+   {
+     border: 0px solid #fff;
+     margin-top: 10vh;
+     color:white;
+     padding:50px 60px 50px 60px;
+     background-color:rgba(0,0,0,0.6);
+
+
+   }
+    .button-group{
+    margin-top:10vh;
+    }
+
+
+</style>
+<div class="content-section" style="width:100%;">
+    <div class="col-12">
+        <div id="about" class="offset">
+    <div class="col-12 text-center">
+        <h3 class="heading">SERVICES</h3>
+        <div class="heading-underline"></div>
+    </div>
+<p>Activity Maintenance Application is a web based application developed on python platform.  This is for everyday use for student and teacher of a university. This app serves the used based on their role. There are mainly 3 different roles categorized as Admin, Student and Teacher. Based on the particular role’s operations/functions are divided uniquely.</p>
+<br><h6>MODULES :</h6><br><h6>1 : Admin</h6><h6>2 : Teacher</h6><h6>2 : Student</h6><br>
+ <p>ADMIN :</p><p>In this Activity Maintenance Application, administrator can add or register all students and teachers in the University. Admin is responsible to maintain the database en which teacher/student information is present.</p><br>
+ <p>TEACHER : </p><p>•	Teachers also need to get registered first. After getting  the registration he/she can login into their accounts.</p>
+  <p>•	Teachers can handle their profile and the personal data.</p><p>•	Teachers can add Class Test marks according to course number and course name.</p>
+  <p>•	They can edit the uploaded Class Test Data.</p><p>•	Teachers can also delete data if needed.</p><br>
+   <p>STUDENT : </p><p>•	Students need to get registered first. After getting  the registration he/she can login into their accounts.</p>
+    <p>•	Students can handle their profile .</p><p>•	Students can view their Class Test marks according to course number and course name.</p>
+
+        </div>
+</div>
+
+    </div>
+
+{% endblock %}

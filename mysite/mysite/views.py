@@ -11,3 +11,6 @@ def about(request):
 def contact(request):
     return render(request, 'project/contact.html', {'title': 'contact'})
 
+def service(request):
+    return render(request, 'project/service.html', {'title': 'service'})
+

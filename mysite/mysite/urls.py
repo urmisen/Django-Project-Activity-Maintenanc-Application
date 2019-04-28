@@ -28,6 +28,7 @@ urlpatterns = [
     path('',index),
     path('about/',about),
     path('contact/',contact),
+    path('service/',service),
 
     path('login/', s_views.login_view, name='login'),
     path('register/', s_views.register_view, name='register'),

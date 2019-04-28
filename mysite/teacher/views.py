@@ -100,7 +100,7 @@ def edit_marks(request,pk):
             form.save()
             username = form.cleaned_data.get('student_id')
             messages.success(request, f'data has been submitted')
-            return redirect('ct_marks')
+            return redirect('t_ct_marks')
     else:
         form = CT_MarksForm(instance=item)
     return render(request, 'teacher/edit_marks.html', {'form' : form})

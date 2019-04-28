@@ -56,7 +56,7 @@ class CT_MarksForm(forms.ModelForm):
     student_id = forms.IntegerField()
     first_name = forms.CharField()
     last_name = forms.CharField()
-    subject_name = forms.CharField()
+    course_name = forms.CharField()
     CT_1 = forms.IntegerField()
     CT_2 = forms.IntegerField()
     CT_3 = forms.IntegerField()
@@ -64,4 +64,4 @@ class CT_MarksForm(forms.ModelForm):
 
     class Meta:
         model = CT_Marks
-        fields = ['student_id', 'first_name', 'last_name', 'subject_name','CT_1','CT_2','CT_3','CT_4']
+        fields = ['student_id', 'first_name', 'last_name', 'course_name','CT_1','CT_2','CT_3','CT_4']
