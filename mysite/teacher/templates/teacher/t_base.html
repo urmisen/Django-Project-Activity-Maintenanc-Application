@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="/static/bootstrap-4.1.3-dist/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="style.css">-->
+	<link rel="stylesheet" href="/static/css/fixed.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600 rel='stylesheet' type='text/css'" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    body{
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+    color: #505962;
+    }
+
+    .offset:before{
+    height: 4rem;
+    margin-top: -4rem;
+    content:"";
+    display:block:
+    }
+    nav{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+    background-color:rgba(0,0,0,0.4);
+    }
+    ul{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    }
+
+    ul li{
+    float:left;
+    color:white;
+    width:120px;
+    height:50px;
+    line-height:50px;
+    opacity:.8;
+    text-align:center;
+    padding-right: .7rem;
+    position:relative;
+    border:1px;
+    color:white;
+    }
+    ul li:hover{
+    background-color:orange;
+    height:50px;
+    color:white;
+    }
+    ul li ul li ul li{
+    width:200px;
+    color:white;
+    }
+    ul ul{
+    display:none;
+    background-color:rgba(0,0,0,0.6);
+    }
+    ul li:hover >ul{
+    display:block;
+    }
+    ul ul ul{
+    margin-left:120px;
+    top:0;
+    position: absolute;
+    }
+
+
+    .carousel-item{
+     height:100vh;
+     }
+     .carousel-caption{
+     position:absolute;
+     top:38%;
+     text-transform:uppercase;
+     width:100%;
+     right:0;
+     left:0;
+     }
+     .carousel-caption h1{
+     font-size:2.8rem;
+     font-weight:700;
+     text-shadow:.1rem .1rem .8rem block;
+     padding-bottom:1rem;
+     }
+     .carousel-caption h3{
+     font-size:1.8rem;
+     text-shadow:.1rem .1rem .5rem block;
+     padding-bottom:1.6rem;
+     }
+     .btn-lg{
+     border-width:medium;
+     border-radius:0;
+     font-size:.8rem;
+     }
+     .jumbotron{
+    border-radius:0;
+    padding:3rem 0 2rem;
+    }
+    .heading{
+    font-size:1.5rem;
+    font-weight:700;
+    text-transform:uppercase;
+    padding-bottom:1.9rem;
+    }
+    .heading-underline{
+    width:8rem;
+    height:.2rem;
+    background-color:orange;
+    margin:0 auto 2rem;
+}
+.portfolio img{
+width:90%;
+padding:0 0 0 0;
+margin-left:2rem;
+margin-bottom:2rem;
+}
+.row .no-padding [class*=col-]{
+padding:0;
+}
+.portfolio img:hover{
+transform:scale(1.1);
+cursor:zoom-in;
+}
+.card{
+margin:2rem;
+
+}
+
+footer{
+background-color:#48474e;
+color:white;
+padding:2rem 0 3rem;
+margin-top:1rem;
+}
+footer a{
+color:white;
+}
+footer svg.svg-inline--fa{
+font-size:1.6rem;
+margin:1.2rem .5rem 0 0;
+}
+footer svg.svg-inline--fa:hover{
+color:#1ebba3;
+}
+hr.socket{
+border-top:.2rem solid orange;
+width:100%;
+}
+.divider{
+        background-color:orange;
+        height:5px;
+        margin-top:4.1rem;
+      }
+
+
+
+
+/*============= COURSE SECTION =============*/
+
+.narrow {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.btn-md {
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.1rem;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+
+
+
+
+</style>
+<body data-spy="scroll" data-target="#navbarResponsive">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+          <a class="navbar-brand" href="">Activity Maintenance Application</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="" style="color:white; padding-top: .8rem;">CT_Marks</a>
+                      <ul>
+                          <li><a>1st -Odd</a>
+                          <ul><li><a href="{% url 'tCHEM_1113' %}">CHEM 1113</a></li>
+                              <li><a href="{% url 'tCSE_1101' %}">CSE 1101</a></li>
+                              <li><a href="{% url 'tEEE_1151' %}">EEE 1151</a></li>
+                              <li><a href="{% url 'tMATH_1113' %}">MATH 1113</a></li>
+                              <li><a href="{% url 'tHUM_1113' %}">HUM 1113</a></li>
+                          </ul></li>
+                          <li><a>1st -Even</a>
+                          <ul><li><a href="{% url 'tCSE_1201' %}">CSE 1201</a></li>
+                              <li><a href="{% url 'tCSE_1203' %}">CSE 1203</a></li>
+                              <li><a href="{% url 'tMATH_1213' %}">MATH 1213</a></li>
+                              <li><a href="{% url 'tHUM_1213' %}">HUM 1213</a></li>
+                              <li><a href="{% url 'tPHY_1213' %}">PHY 1213</a></li>
+                          </ul></li>
+                          <li><a>2nd -Odd</a>
+                          <ul><li><a href="{% url 'tCSE_2101' %}">CSE 2101</a></li>
+                              <li><a href="{% url 'tCSE_2103' %}">CSE 2103</a></li>
+                              <li><a href="{% url 'tEEE_2151' %}">EEE 2151</a></li>
+                              <li><a href="{% url 'tMATH_2113' %}">MATH 2113</a></li>
+                              <li><a href="{% url 'tHUM_2113' %}">HUM 2113</a></li>
+                          </ul></li>
+                          <li><a>2nd -Even</a>
+                          <ul><li><a href="{% url 'tCSE_2201' %}">CSE 2201</a></li>
+                              <li><a href="{% url 'tCSE_2203' %}">CSE 2203</a></li>
+                              <li><a href="{% url 'tCSE_2205' %}">CSE 2205</a></li>
+                              <li><a href="{% url 'tEEE_2251' %}">EEE 2251</a></li>
+                              <li><a href="{% url 'tMATH_2213' %}">MATH 2213</a></li>
+                          </ul></li>
+                          <li><a>3rd -Odd</a>
+                          <ul><li><a href="{% url 'tCSE_3101' %}">CSE 3101</a></li>
+                              <li><a href="{% url 'tCSE_3103' %}">CSE 3103</a></li>
+                              <li><a href="{% url 'tCSE_3105' %}">CSE 3105</a></li>
+                              <li><a href="{% url 'tCSE_3107' %}">CSE 3107</a></li>
+                              <li><a href="{% url 'tCSE_3109' %}">CSE 3109</a></li>
+                          </ul></li>
+                          <li><a>3rd -Even</a>
+                          <ul><li><a href="{% url 'tCSE_3201' %}">CSE 3201</a></li>
+                              <li><a href="{% url 'tCSE_3203' %}">CSE 3203</a></li>
+                              <li><a href="{% url 'tCSE_3205' %}">CSE 3205</a></li>
+                              <li><a href="{% url 'tCSE_3207' %}">CSE 3207</a></li>
+                              <li><a href="{% url 'tCSE_3209' %}">CSE 3209</a></li>
+                          </ul></li>
+                          <li><a>4th-Odd</a>
+                          <ul><li><a href="{% url 'tCSE_4101' %}">CSE 4101</a></li>
+                              <li><a href="{% url 'tCSE_4103' %}">CSE 4103</a></li>
+                              <li><a href="{% url 'tCSE_4105' %}">CSE 4105</a></li>
+                              <li><a href="{% url 'tCSE_4107' %}">CSE 4107</a></li>
+                              <li><a href="{% url 'tCSE_4109' %}">CSE 4109</a></li>
+                          </ul></li>
+                          <li><a>4th-Even</a>
+                          <ul><li><a href="{% url 'tCSE_4201' %}">CSE 4201</a></li>
+                              <li><a href="{% url 'tCSE_4203' %}">CSE 4203</a></li>
+                              <li><a href="{% url 'tCSE_4205' %}">CSE 4205</a></li>
+                              <li><a href="{% url 'tCSE_4207' %}">CSE 4207</a></li>
+                              <li><a href="{% url 'tCSE_4209' %}">CSE 4209</a></li>
+                          </ul></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'add_marks' %}" style="color:white;padding-top: .8rem;">Add_Marks</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 't_profile' %}" style="color:white;padding-top: .8rem;">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 't_update' %}" style="color:white;padding-top: .8rem;">Setting</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="/t_about/" style="color:white;padding-top: .8rem;">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/t_contact/" style="color:white;padding-top: .8rem;">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'logout' %}" style="color:white;padding-top: .8rem;">Logout</a>
+                  </li>
+              </ul>
+          </div>
+
+      </nav>
+<div class="divider"></div>
+  <main role="main" class="container">
+      <div class="row">
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% block main_content %}
+        {% endblock%}
+      </div>
+    </main>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
+</html>

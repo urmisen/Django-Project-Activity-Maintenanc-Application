@@ -1,0 +1,76 @@
+{% extends 'student/st_base.html' %}
+{% block main_content %}
+
+<style>
+    body {
+      background-image:url(/media/computers-3.png);
+      background-size: 100% 100%;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      height: 100vh;
+      margin: 0px;
+      padding:0px
+      width:100%;
+      height:100%;
+  }
+
+
+
+   .content-section
+   {
+     border: 0px solid #fff;
+     margin-top: 10vh;
+     color:white;
+     padding:50px 60px 50px 60px;
+     background-color:rgba(0,0,0,0.6);
+
+
+   }
+    .button-group{
+    margin-top:10vh;
+    }
+
+
+</style>
+<div class="content-section" style="width:100%;">
+    <div class="col-12">
+<div class="button-group">
+    <h4> {{ header }}</h4>
+
+</div>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td style="color:white;">Student ID</td>
+        <td style="color:white;">First Name</td>
+        <td style="color:white;">Last Name</td>
+        <td style="color:white;">Course Name</td>
+        <td style="color:white;">CT_1</td>
+        <td style="color:white;">CT_2</td>
+        <td style="color:white;">CT_3</td>
+        <td style="color:white;">CT_4</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in items %}
+    <tr>
+        <td style="color:white;">{{ item.student_id }}</td>
+        <td style="color:white;">{{ item.first_name }}</td>
+        <td style="color:white;">{{ item.last_name }}</td>
+        <td style="color:white;">{{ item.course_name }}</td>
+        <td style="color:white;">{{ item.CT_1 }}</td>
+        <td style="color:white;">{{ item.CT_2 }}</td>
+        <td style="color:white;">{{ item.CT_3 }}</td>
+        <td style="color:white;">{{ item.CT_4 }}</td>
+
+
+    </tr>
+
+    {% endfor %}
+    </tbody>
+
+
+</table>
+</div>
+    </div>
+{% endblock %}
